@@ -1,0 +1,177 @@
+@import "../../../../../style/public/comm_box_list.wxss";
+@import "../../../style/skin.wxss";
+
+page {
+	background-color: #fff;
+}
+
+.main {
+	padding: 0rpx 0rpx 100rpx;
+}
+
+.up {
+	width: 100%;
+}
+
+.up image {
+	width: 100%;
+	height: 500rpx;
+}
+
+.down {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10rpx 0rpx;
+	margin-top: 0rpx;
+	z-index: 9999;
+}
+
+.menu {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #fff;
+	padding: 20rpx 20rpx;
+	border-radius: 20rpx;
+}
+
+.menu .item {
+	width: 33.33%;
+	display: flex;
+	align-items: center;
+	justify-content: center;  
+	margin-bottom: 10rpx;
+}
+
+.menu .item .item-inner {
+	width: 100%;
+	display: flex; 
+	align-items: center;
+	justify-content: center;
+
+} 
+  
+
+.menu .item-inner .img image {
+	width: 230rpx; 
+}
+
+.menu .item-inner .title {
+	margin-top: 136rpx;
+	font-size: 26rpx;
+	color: #4f5368;
+}
+
+/*** 图文列表盒子 ***/
+.home-list-box {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20rpx 30rpx 30rpx 30rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+	padding: 0;
+	margin-top: 40rpx;
+	overflow: unset;
+}
+
+.home-list-box .item {
+	padding: 0rpx 0rpx;
+	background-color: #fff;
+	border-radius: 20rpx;
+	position: relative;
+	max-height: 180rpx;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: row;
+	margin-bottom: 70rpx;
+}
+
+.home-list-box .item:first-child {
+	margin-top: 60rpx;
+}
+
+.home-list-box .item .left {
+	width: 190rpx;
+	height: 210rpx;
+	margin-left: 0rpx;
+	margin-top: -30rpx;
+	border-radius: 15rpx !important;
+	overflow: hidden;
+	box-shadow: var(--ShadowSize) var(--greyShadow);
+}
+
+.home-list-box .item .right {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	margin-left: 20rpx;
+	margin-right: 20rpx;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+	padding: 15rpx 10rpx;
+}
+
+.home-list-box .item .right .title {
+	width: 100%;
+	font-size: 32rpx;
+	color: #000;
+	line-height: 1.5;
+	margin-top: 0rpx;
+	font-weight: bold;
+}
+
+.home-list-box .item .desc {
+	margin-top: 5rpx;
+	font-size: 28rpx;
+	color: #999;
+	line-height: 1.2;
+	height: 60rpx;
+	margin-bottom: 10rpx;
+}
+
+
+.home-list-box .item .data {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-top: 0rpx;
+	color: #999;
+	font-size: 24rpx;
+	position: relative;
+}
+
+.hot-line {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 10rpx 30rpx 10rpx;
+	align-items: center;
+}
+
+.hot-line .left {
+	font-size: 34rpx;
+	font-weight: bold;
+	color: #000;
+	margin-top:10rpx;
+}
+
+.hot-line .right {
+	font-size: 28rpx;
+	font-weight: bold;
+	color: #bbb;
+}
+
+.scroll-x{
+	width:100%;
+	padding:0 28rpx;
+}
+
+.comm-list-box { 
+    padding: 0rpx 10rpx 30rpx 10rpx; 
+}

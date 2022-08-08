@@ -1,0 +1,38 @@
+<view wx:if="{{!_params}}" class="margin-top load loading text-l load-project"></view>
+<block wx:else>
+
+	<cmpt-comm-list type="enroll-list" _params="{{_params}}" search="{{search}}" _menus="{{sortMenus}}" _items="{{sortItems}}" sortMenusDefaultIndex="0" route="enroll/list" topBottom="120" isTotalMenu="{{false}}" placeholder="搜索" bind:list="bindCommListCmpt">
+
+		<!-- List Begin -->
+		<view class="main-enroll-list">
+			<view class="item shadow" wx:for="{{dataList.list}}" wx:key="key" bindtap="url" data-url="../detail/enroll_detail?id={{item._id}}">
+				<text wx:if="{{item.statusDesc=='进行中'}}" class="status bg-project">招生中</text>
+				<text wx:else class="status bg-grey">{{item.statusDesc}}</text>
+
+				<view class="line1">{{item.ENROLL_TITLE}}</view>
+				<view class="line2">
+					<image mode="aspectFill" class="loading shadow" src="{{item.ENROLL_OBJ.cover[0]}}" />
+					<view class="right">
+						<view class="right-line1 content-cut-three">{{item.ENROLL_OBJ.obj}}</view>
+						<view class="right-line2 text-orange text-bold">招录人数：{{item.ENROLL_MAX_CNT>0?item.ENROLL_MAX_CNT+'人':'不限人数'}}</view> 
+					</view>
+				</view>
+			 
+			</view>
+		</view> 
+		<!-- List END -->
+
+		<!--load begin-->
+		<import src="../../../../../tpls/public/list_load_tpl.wxml" />
+		<template is="listLoadTpl" data="{{skin:'load-project',dataList}}" />
+		<!--load end-->
+
+	</cmpt-comm-list>
+
+
+	<block wx:if="{{skin.IS_SUB}}">
+		<import src="../../tpls/menu_tpl.wxml" />
+		<template is="menuTpl" data="{{skin,curMenu:'enroll_index',returnHome}}" />
+	</block>
+
+</block>

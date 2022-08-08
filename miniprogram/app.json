@@ -1,0 +1,101 @@
+{
+	"pages": [
+		"projects/kidschool/pages/default/index/default_index",
+		"projects/kidschool/pages/about/index/about_index",
+		"projects/kidschool/pages/search/search",
+		"projects/kidschool/pages/my/index/my_index",
+		"projects/kidschool/pages/my/reg/my_reg",
+		"projects/kidschool/pages/my/edit/my_edit",
+		"projects/kidschool/pages/my/foot/my_foot",
+		"projects/kidschool/pages/my/fav/my_fav",
+		"projects/kidschool/pages/news/index/news_index",
+		"projects/kidschool/pages/news/detail/news_detail",
+		"projects/kidschool/pages/news/cate1/news_cate1",
+		"projects/kidschool/pages/admin/news/list/admin_news_list",
+		"projects/kidschool/pages/admin/news/add/admin_news_add",
+		"projects/kidschool/pages/admin/news/edit/admin_news_edit",
+		"projects/kidschool/pages/admin/setup/about/admin_setup_about",
+		"projects/kidschool/pages/admin/setup/about_list/admin_setup_about_list",
+		"projects/kidschool/pages/admin/setup/qr/admin_setup_qr",
+		"projects/kidschool/pages/admin/index/home/admin_home",
+		"projects/kidschool/pages/admin/index/login/admin_login",
+		"projects/kidschool/pages/admin/content/admin_content",
+		"projects/kidschool/pages/admin/mgr/log/admin_log_list",
+		"projects/kidschool/pages/admin/mgr/edit/admin_mgr_edit",
+		"projects/kidschool/pages/admin/mgr/list/admin_mgr_list",
+		"projects/kidschool/pages/admin/mgr/add/admin_mgr_add",
+		"projects/kidschool/pages/admin/mgr/pwd/admin_mgr_pwd",
+		"projects/kidschool/pages/admin/user/list/admin_user_list",
+		"projects/kidschool/pages/admin/user/detail/admin_user_detail",
+		"projects/kidschool/pages/admin/user/export/admin_user_export",
+		"projects/kidschool/pages/enroll/index/enroll_index",
+		"projects/kidschool/pages/enroll/join/enroll_join",
+		"projects/kidschool/pages/enroll/detail/enroll_detail",
+		"projects/kidschool/pages/enroll/my_join_list/enroll_my_join_list",
+		"projects/kidschool/pages/enroll/my_join_detail/enroll_my_join_detail",
+		"projects/kidschool/pages/enroll/join_edit/enroll_join_edit",
+		"projects/kidschool/pages/admin/enroll/list/admin_enroll_list",
+		"projects/kidschool/pages/admin/enroll/add/admin_enroll_add",
+		"projects/kidschool/pages/admin/enroll/edit/admin_enroll_edit",
+		"projects/kidschool/pages/admin/enroll/join_list/admin_enroll_join_list",
+		"projects/kidschool/pages/admin/enroll/export/admin_enroll_export",
+		"projects/kidschool/pages/album/detail/album_detail",
+		"projects/kidschool/pages/album/index/album_index",
+		"projects/kidschool/pages/admin/album/list/admin_album_list",
+		"projects/kidschool/pages/admin/album/add/admin_album_add",
+		"projects/kidschool/pages/admin/album/edit/admin_album_edit",
+		"cmpts/public/form/form_set/field/form_set_field",
+		"cmpts/public/form/form_show/content/form_show_content",
+		"pages/test1/test1"
+	],
+	"window": {
+		"backgroundColor": "#f1f1f1",
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#FD6451",
+		"navigationBarTitleText": "幼儿园招生报名小程序",
+		"navigationBarTextStyle": "white"
+	},
+	"tabBar": {
+		"custom": false,
+		"backgroundColor": "#FFFFFF",
+		"color": "#999999",
+		"selectedColor": "#FD6451",
+		"list": [
+			{
+				"pagePath": "projects/kidschool/pages/default/index/default_index",
+				"text": "首页",
+				"iconPath": "/projects/kidschool/images/tabbar/home.png",
+				"selectedIconPath": "/projects/kidschool/images/tabbar/home_cur.png"
+			},
+			{
+				"pagePath": "projects/kidschool/pages/enroll/index/enroll_index",
+				"text": "招生报名",
+				"iconPath": "/projects/kidschool/images/tabbar/enroll.png",
+				"selectedIconPath": "/projects/kidschool/images/tabbar/enroll_cur.png"
+			}, 
+			{
+				"pagePath": "projects/kidschool/pages/album/index/album_index",
+				"text": "多彩校园",
+				"iconPath": "/projects/kidschool/images/tabbar/album.png",
+				"selectedIconPath": "/projects/kidschool/images/tabbar/album_cur.png"
+			},
+			{
+				"pagePath": "projects/kidschool/pages/my/index/my_index",
+				"text": "我的",
+				"iconPath": "/projects/kidschool/images/tabbar/my.png",
+				"selectedIconPath": "/projects/kidschool/images/tabbar/my_cur.png"
+			}
+		]
+	},
+	"permission": {
+		"scope.userLocation": {
+			"desc": "获取你当前位置信息用于小程序位置接口的效果展示"
+		}
+	},
+	"usingComponents": {
+		"cmpt-comm-list": "/cmpts/public/list/comm_list_cmpt",
+		"cmpt-picker": "/cmpts/public/picker/picker_cmpt",
+		"cmpt-modal": "/cmpts/public/modal/modal_cmpt"
+	},
+	"sitemapLocation": "sitemap.json"
+}

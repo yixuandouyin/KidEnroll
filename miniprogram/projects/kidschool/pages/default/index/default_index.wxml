@@ -1,0 +1,93 @@
+<view class="main">
+	<view class="up">
+		<image mode="widthFix" src="../../../images/home.jpg" />
+	</view>
+	<view class="down">
+		<view class="menu card-project">
+			<view bindtap="url" data-url="../../news/index/news_index?id=1" class="item">
+				<view class="item-inner">
+					<view class="img">
+						<image mode="widthFix" src="../../../images/menu/intro.png" />
+					</view> 
+				</view>
+			</view>
+
+			<view bindtap="url" data-url="../../news/index/news_index?id=2" class="item">
+				<view class="item-inner">
+					<view class="img">
+						<image mode="widthFix" src="../../../images/menu/guide.png" />
+					</view> 
+				</view>
+			</view>
+
+			<view bindtap="url" data-url="../../news/index/news_index?id=3" class="item">
+				<view class="item-inner">
+					<view class="img">
+						<image mode="widthFix" src="../../../images/menu/news.png" />
+					</view> 
+				</view>
+			</view>
+
+			<view bindtap="url" data-url="../../album/index/album_index" data-type="relaunch" class="item">
+				<view class="item-inner">
+					<view class="img">
+						<image mode="widthFix" src="../../../images/menu/album.png" />
+					</view> 
+				</view>
+			</view>
+
+			<view bindtap="url" data-url="../../enroll/index/enroll_index" data-type="relaunch" class="item">
+				<view class="item-inner">
+					<view class="img">
+						<image mode="widthFix" src="../../../images/menu/enroll.png" />
+					</view> 
+				</view>
+			</view>
+
+			<view bindtap="url"  data-url="../../enroll/my_join_list/enroll_my_join_list" class="item">
+				<view class="item-inner">
+					<view class="img">
+						<image mode="widthFix" src="../../../images/menu/my.png" />
+					</view> 
+				</view>
+			</view>
+
+		</view>
+
+
+		<!--
+		<view class="hot-line">
+			<view class="left">本园动态</view>
+		</view>-->
+
+		<!-- List Begin -->
+		<view wx:if="{{!dataList}}" class="margin-top load loading text-l load-project"></view>
+
+		<view wx:else class="comm-list-box sub-margin-bottom">
+			<block wx:for="{{dataList}}" wx:key="key">
+				<view class="item item-leftbig1" bindtap="url" data-url="../../{{item.type}}/detail/{{item.type}}_detail?id={{item.id}}">
+					<image mode="aspectFill" lazy-load="{{true}}" class="leftbig-left loading" src="{{item.pic}}">
+					</image>
+					<view class="leftbig-right">
+						<view class="leftbig-title content-cut-one">{{item.title}}</view>
+						<view class="leftbig-desc">
+							<text class="content-cut-two">{{item.desc}} </text>
+						</view>
+						<view class="data">
+							<view class="bottom-tag-list text-cut">
+							</view>
+							<view class="bottom-status">{{item.ext}}</view>
+						</view>
+					</view>
+				</view>
+
+			</block>
+		</view>
+		<!-- List END -->
+	</view>
+</view>
+
+<block wx:if="{{skin.IS_SUB}}">
+	<import src="../../tpls/menu_tpl.wxml" />
+	<template is="menuTpl" data="{{curMenu:'home_index',returnHome:false}}" />
+</block>
